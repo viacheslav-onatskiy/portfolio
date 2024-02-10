@@ -1,4 +1,4 @@
-import { About, Footer, Header, Skills, Testimonial, Work } from './container';
+import { About, Footer, Header, Skills, Work } from './container';
 
 import './App.scss';
 import { Navbar } from './components';
@@ -11,7 +11,6 @@ const App = () => {
       <About />
       <Work />
       <Skills />
-      <Testimonial />
       <Footer />
     </div>
   );
