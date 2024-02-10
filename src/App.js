@@ -1,11 +1,12 @@
 import { About, Footer, Header, Skills, Testimonial, Work } from './container';
 
 import './App.scss';
+import { Navbar } from './components';
 
 const App = () => {
   return (
     <div className="app">
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
       <About />
       <Work />

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import { client, urlFor } from '../../client';
 import { convertTextToNewLines } from '../../helpers';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import './Skills.scss';
 
 const Skills = () => {
@@ -57,7 +57,6 @@ const Skills = () => {
                   <p className="bold-text">{experience.year}</p>
                 </div>
                 <motion.div className="app__skills-exp-works">
-                  {console.log('experience.works:', experience.works)}
                   {experience.works.map((work, i) => (
                     <div key={`${i}-${work.name}`}>
                       <motion.div
@@ -84,4 +83,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, 'app__skills');
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  'app__primarybg'
+);
