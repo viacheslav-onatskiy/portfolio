@@ -1,15 +1,30 @@
-import { BsGithub, BsLinkedin, BsMailbox } from 'react-icons/bs';
+import { BsChat, BsGithub, BsLinkedin } from 'react-icons/bs';
 
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <BsGithub />
+      <a
+        href="https://github.com/viacheslav-onatskiy"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <BsGithub />
+      </a>
     </div>
     <div>
-      <BsLinkedin />
+      <a
+        href="https://www.linkedin.com/in/viacheslav-onatskiy/"
+        target="_blank"
+        rel="noreferrer"
+        className="p-text"
+      >
+        <BsLinkedin />
+      </a>
     </div>
     <div>
-      <BsMailbox />
+      <a href="mailto:slava9678@gmail.com">
+        <BsChat />
+      </a>
     </div>
   </div>
 );
