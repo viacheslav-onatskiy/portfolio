@@ -122,6 +122,9 @@ const Footer = () => {
           <h3 className="head-text">Thank you for reviewing my resume!</h3>
         </div>
       )}
+      <div className="app_footer-final-text">
+        <h3 className="head-text">Let's get in touch!</h3>
+      </div>
     </>
   );
 };

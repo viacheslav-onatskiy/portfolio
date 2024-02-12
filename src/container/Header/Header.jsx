@@ -18,23 +18,17 @@ const Header = () => {
   return (
     <div id="home" className="app__header app__flex">
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 3 }}
-        className="app__header-info"
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
       >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
-            <span>✌️</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Viacheslav</h1>
+        {[images.javascript, images.react, images.redux].map(
+          (circle, index) => (
+            <div className="circle-cmp app__flex" key={`circle-${index}`}>
+              <img src={circle} alt="circle" />
             </div>
-          </div>
-
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Software developer</p>
-          </div>
-        </div>
+          )
+        )}
       </motion.div>
 
       <motion.div
@@ -53,17 +47,23 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
+        whileInView={{ x: [100, 0], opacity: [0, 1] }}
+        transition={{ duration: 3 }}
+        className="app__header-info"
       >
-        {[images.javascript, images.react, images.redux].map(
-          (circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
+        <div className="app__header-badge">
+          <div className="badge-cmp app__flex">
+            <span>✌️</span>
+            <div style={{ marginLeft: 20 }}>
+              <p className="p-text">Hello, I am</p>
+              <h1 className="head-text">Viacheslav</h1>
             </div>
-          )
-        )}
+          </div>
+
+          <div className="tag-cmp app__flex">
+            <p className="p-text">Fullstack Developer</p>
+          </div>
+        </div>
       </motion.div>
     </div>
   );

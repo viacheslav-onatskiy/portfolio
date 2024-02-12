@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  align-self: baseline;
 
   margin-right: 5rem;
 
@@ -45,11 +46,11 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #fef4f5;
+    border: 2px solid rgba(255, 165, 0, 0.45);
 
     img {
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
     }
 
     &:hover {
@@ -68,7 +69,8 @@
   }
 
   p {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
   }
 
@@ -132,11 +134,15 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 2rem;
+  margin-right: 1rem;
 
   p {
     font-weight: 800;
     color: var(--gray-color);
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 146px;
   }
 
   @media screen and (max-width: 450px) {

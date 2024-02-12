@@ -18,10 +18,19 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        From Ideas <span>to Interfaces:</span> <br />
-        <span>Front-End</span> In action!
-      </h2>
+      <div className="about__head-text">
+        <p className="top-text">
+          Passionate and competent Software Developer with <span>3+ years</span>{' '}
+          of experience in web development.
+        </p>
+
+        <p className="description-text">
+          I`m specialized in modern JavaScript framework <span>(React) </span>
+          and <span>Node.JS (Express)</span>. Passionate about creating scalable
+          systems, optimizing system performance and creating impacting digital
+          applications.
+        </p>
+      </div>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (

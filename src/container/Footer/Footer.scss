@@ -6,6 +6,12 @@
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+
+  .app_footer-final-text {
+    .head-text {
+      color: var(--secondary-color);
+    }
+  }
 }
 
 .app__footer-cards {
